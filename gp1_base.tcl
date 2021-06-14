@@ -99,7 +99,7 @@ $test exportReport -file /opt/breakingpoint_prd/base_results/$title-$timestamp.c
 # $bps exportReport -file /opt/breakingpoint/results/${tdate}_breakingpoint_${bps_testcase_name}_Group3_Result.csv -format csv
 # $bps exportReport -file /opt/breakingpoint/pdf_results/${tdate}_breakingpoint_${bps_testcase_name}_Group3_Result.pdf -format pdf
 
-# Notify CA or breakingpoint Lab Engineer
+# Notify a Breakingpoint Lab Engineer
 
 # set msg {From: BP@criticalpathsecurity.com}
 # append msg \n "To: " [join pkelley@hyperionavenue.com]

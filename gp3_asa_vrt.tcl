@@ -13,7 +13,7 @@ set tdate [clock format [clock seconds] -format %Y%m%d]
 ###############################################################################################################
 
 puts -nonewline "\n=====================================================================\n\n";
-puts "\nSTARTING VRT ASSESSMENT...\n\nBPS Test Case: $bps_testcase_name\nBPS Host: $bps_host\nUsername: $bps_username\n"; 
+puts "\nSTARTING VRT ASSESSMENT...\n\nBPS Test Case: $bps_testcase_name\nBPS Host: $bps_host\nUsername: $bps_username\n";
 
 # Clear any existing BPS object
 if {[info exists bps]} {itcl::delete object $bps; unset bps;}
@@ -44,7 +44,7 @@ puts -nonewline "Searching for test case: $bps_testcase_name ..."
 set test [$bps createTest -template $bps_testcase_name -name $bps_testcase_name];
 puts "COMPLETED.\n"
 
-# Run the test case and display test progress 
+# Run the test case and display test progress
 puts -nonewline "======================================================================================\n";
 puts -nonewline "Test Case ($bps_testcase_name) ...STARTED\n\n"
 $test run -group $group -progress "bps::textprogress stdout"
@@ -61,7 +61,7 @@ puts -nonewline "Exporting Test Case Report...STARTED\n";
 # $test exportReport -file /var/www/bp_reports/Group_3/$title-$timestamp.pdf -format pdf
 $test exportReport -file /opt/breakingpoint_prd/vrt_results/$title-$timestamp.csv -format csv
 
-# Run the test case and display test progress 
+# Run the test case and display test progress
 puts -nonewline "======================================================================================\n";
 puts -nonewline "Test Case ($bps_testcase_name) ...STARTED\n\n"
 $test run -group $group -progress "bps::textprogress stdout"
@@ -78,7 +78,7 @@ puts -nonewline "Exporting Test Case Report...STARTED\n";
 # $test exportReport -file /var/www/bp_reports/Group_3/$title-$timestamp.pdf -format pdf
 $test exportReport -file /opt/breakingpoint_prd/vrt_results/$title-$timestamp.csv -format csv
 
-# Run the test case and display test progress 
+# Run the test case and display test progress
 puts -nonewline "======================================================================================\n";
 puts -nonewline "Test Case ($bps_testcase_name) ...STARTED\n\n"
 $test run -group $group -progress "bps::textprogress stdout"
@@ -101,7 +101,7 @@ $test exportReport -file /opt/breakingpoint_prd/vrt_results/$title-$timestamp.cs
 # $bps exportReport -file /opt/breakingpoint/results/${tdate}_breakingpoint_${bps_testcase_name}_Group3_Result.csv -format csv
 # $bps exportReport -file /opt/breakingpoint/pdf_results/${tdate}_breakingpoint_${bps_testcase_name}_Group3_Result.pdf -format pdf
 
-# Notify CA or breakingpoint Lab Engineer
+# Notify a Breakingpoint Lab Engineer
 
 # set msg {From: BP@criticalpathsecurity.com}
 # append msg \n "To: " [join pkelley@hyperionavenue.com]
@@ -119,4 +119,3 @@ foreach {slot port} $sBpsPorts {
 
 
 itcl::delete object $bps; unset bps;
-
