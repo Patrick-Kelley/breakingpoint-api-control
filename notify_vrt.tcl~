@@ -1,6 +1,6 @@
 # This script sends an email notification when test is complete
 set msg {From: BP@testing.criticalpathsecurity.com}
-append msg \n "To: " [join jonathan.stuart@criticalpathsecurity.com]
+
 append msg \n "To: " [join jared.haviland@criticalpathsecurity.com]
 append msg \n "To: " [join patrick.kelley@criticalpathsecurity.com]
 append msg \n "Subject: VRT Test is Finished"

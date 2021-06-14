@@ -20,7 +20,7 @@ if {[info exists bps]} {itcl::delete object $bps; unset bps;}
 
 # Connect to the BPS
 puts -nonewline "=====================================================================\n\n";
-puts -nonewline "Connecting to the breakingpoint - BreakingPoint device at: $bps_host..."
+puts -nonewline "Connecting to the BreakingPoint device at: $bps_host..."
 set bps [bps::connect $bps_host $bps_username $bps_password -onclose exit]
 puts "COMPLETED.\n"
 
